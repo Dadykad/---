@@ -31,4 +31,10 @@ input.onGesture(Gesture.Shake, function () {
 basic.forever(function () {
     גילגול = input.rotation(Rotation.Roll)
     עילרוד = input.rotation(Rotation.Pitch)
+    basic.clearScreen()
+    if (הפעלה) {
+        led.plot(0, 4)
+    }
+    led.plot(0, 4 - מהירות_סיבוב / 25)
+    led.plot(45 + גילגול / 18, 45 + עילרוד / 18)
 })
